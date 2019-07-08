@@ -39,12 +39,12 @@ services:
         tty: true
         depends_on:
             - wordpress
-        image: welaika/wordmove
+        image: welaika/wordmove:php7
         restart: on-failure:5
         container_name: my_wordmove  # (+)
         volumes:
             - ./public:/var/www/html
-            - ~/.ssh:/home/wordmove/.ssh      # (!)
+            - ~/.ssh:/root/.ssh      # (!)
 #######################################
 #
 # In case you want to reuse this config 
